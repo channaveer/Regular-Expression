@@ -14,8 +14,7 @@ preg_match($pattern, $stringToMatch, $matches);
 
 
 Regular Expresssion          |       String               |            	Match      |     Notes 
----------------------------- | ---------------------------|  --------------------- | -------------
-
+---------------------------- | -------------------------  |  --------------------- | -------------
 /abc/                        |       abc                  |                Yes      |      As abc is there in the string
 
 /abc/                       |        abcdef               |               Yes       |     As abc is a part of the string
@@ -54,7 +53,8 @@ Others
 
 \number - Eg: \1 \2
 
-
+Regular Expresssion          |       String               |            	Match      |     Notes 
+---------------------------- | -------------------------  |  --------------------- | -------------
 /ab\d/               |           ab3                       |          Yes         |    as ab and one digit is there
 
 /abc\d/              |           ab23                      |          No          |    as the string must start with abc and then one digit, but in our string its not there
@@ -73,6 +73,8 @@ Advanced Pattern Matching
 $ - End of string
 
 
+Regular Expresssion          |       String               |            	Match      |     Notes 
+---------------------------- | -------------------------  |  --------------------- | -------------
 /^abc/            |          abc               |                      Yes      |       As the string must start with
 
 /^abc/            |          abcdef            |                      Yes      |       As the string must start with
@@ -100,7 +102,8 @@ Repetation
 			Eg: docx? may read to doc or docx
 
 
-
+Regular Expresssion          |       String               |            	Match      |     Notes 
+---------------------------- | -------------------------  |  --------------------- | -------------
 /a*bc/      |            abc                 |                        Yes      |       Because 'a' may repeat zero or many times
 
 /a*bc/      |            bc                  |                        Yes      |       Because 'a' may repeat zero or many times
@@ -117,7 +120,8 @@ Wildcard
 
 . - Match any single character : letter, number, whitespace etc
 
-
+Regular Expresssion          |       String               |            	Match      |     Notes 
+---------------------------- | -------------------------  |  --------------------- | -------------
 /ab.de/      |       abcde               |                            Yes     |    Because '.' matches any letter, number or whitespace
 
 /ab.de/      |       ab4de               |                            Yes     |    Because '.' matches any letter, number or whitespace
@@ -137,7 +141,8 @@ Escaping
 \ - Match meta characters by escaping them
 Eg: if you want to match '.' in the pattern then you must escape '.' else the pattern will think that you want to match one character
 
-
+Regular Expresssion          |       String               |            	Match      |     Notes 
+---------------------------- | -------------------------  |  --------------------- | -------------
 /abc\./     |       abc.                |                             Yes     |    As we have escaped '.' with \. it acts as normal character
 
 
@@ -149,6 +154,8 @@ By default case sensitive
 
 i - to make case insensitive
 
+Regular Expresssion          |       String               |            	Match      |     Notes 
+---------------------------- | -------------------------  |  --------------------- | -------------
 /abc/       |        abc            |                         Yes    |     As it matches
 
 /abc/       |        Abc            |                         No     |     No as the case doesnt match
@@ -163,7 +170,8 @@ CharacterSets
 
 	Eg: [abc] will match either a, b or c and nothing else
 
-
+Regular Expresssion          |       String               |            	Match      |     Notes 
+---------------------------- | -------------------------  |  --------------------- | -------------
 /a[123]b/      |     a2b                       |          Yes     |    as 2 matches in the character set
 
 /a[123]b/      |     a4b                       |          No      |    as 4 does not matches in the character set
@@ -178,7 +186,8 @@ Character Ranges
 [ - ] - Specifies the range of the characters inside the characterset
 	Eg: [0-9] will match any number between 0 to 9  and nothing else
 
-
+Regular Expresssion          |       String               |            	Match      |     Notes 
+---------------------------- | -------------------------  |  --------------------- | -------------
 /a[1-5]b/        |   a2b                     |                Yes      |   As 2 is there in the range between 1-5
 
 /a[1-5]b/        |   a6b                    |                 No       |   As 6 is not there in the range between 1-5
@@ -191,6 +200,8 @@ Negated CharacterSets
 
 [^ ] - This will negate the character set ie it will match any other characrters expect the ones in characterset
 
+Regular Expresssion          |       String               |            	Match      |     Notes 
+---------------------------- | -------------------------  |  --------------------- | -------------
 /a[^1-5]b/     |      a6b                      |               Yes       |     As 6 is not there in the range between 1-5
 
 /a[^1-5]b/    |       a4b                      |               No        |     As 4 is there in the range between 1-5
