@@ -16,11 +16,8 @@ preg_match($pattern, $stringToMatch, $matches);
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
 /abc/                        |       abc                  |                Yes      |      As abc is there in the string
-
 /abc/                       |        abcdef               |               Yes       |     As abc is a part of the string
-
 /abc/                       |        bcdef                |               No        |     As string does not contain abc but has only bc
-
 /2:3/                       |        12:34:56             |               Yes       |     As 2:3 exists in string
 
 
@@ -56,11 +53,8 @@ Others
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
 /ab\d/               |           ab3                       |          Yes         |    as ab and one digit is there
-
 /abc\d/              |           ab23                      |          No          |    as the string must start with abc and then one digit, but in our string its not there
-
 /\d\d/               |           ab23                      |          Yes         |    As we need 2 digits 23 will match it \d - 1 digit
-
 /\w\s\d/             |           ab 34                     |          Yes         |    As we have b space 3 and our patterns was expecting the same ie character space and digit
 
 
@@ -76,15 +70,10 @@ $ - End of string
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
 /^abc/            |          abc               |                      Yes      |       As the string must start with
-
 /^abc/            |          abcdef            |                      Yes      |       As the string must start with
-
 /^abc/            |          123abcdef         |                      No       |       As the string dont  start with
-
 /abc$/            |          123abc            |                      Yes      |       As the string ends with abc
-
 /^abc$/           |          abc               |                      Yes      |       This will match the whole string
-
 /^abc$/           |          abcdef            |                      No       |       This will match the whole string
 
 
@@ -105,13 +94,9 @@ Repetation
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
 /a*bc/      |            abc                 |                        Yes      |       Because 'a' may repeat zero or many times
-
 /a*bc/      |            bc                  |                        Yes      |       Because 'a' may repeat zero or many times
-
 /a+bc/      |            bc                  |                        No       |       Because 'a' may repeat one or many times
-
 /a+bc/      |            bc                  |                        No       |       Because 'a' may repeat one or many times
-
 /a+bc/      |            aabc                |                        Yes      |       Because 'a' may repeat one or many times
 
 
@@ -123,15 +108,10 @@ Wildcard
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
 /ab.de/      |       abcde               |                            Yes     |    Because '.' matches any letter, number or whitespace
-
 /ab.de/      |       ab4de               |                            Yes     |    Because '.' matches any letter, number or whitespace
-
 /ab.de/      |       ab de               |                            Yes     |    Because '.' matches any letter, number or whitespace
-
 /ab.de/      |       abde                |                            No      |    Because '.' does not match  0 or more times like * hence there must be atleast one character
-
 /ab.*/       |       abde                |                            Yes     |    Because '.' has '*' which matches  0 or more characters
-
 /ab.*/       |       ab                  |                            Yes     |    Because '.' has '*' which matches  0 or more characters
 
 
@@ -157,9 +137,7 @@ i - to make case insensitive
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
 /abc/       |        abc            |                         Yes    |     As it matches
-
 /abc/       |        Abc            |                         No     |     No as the case doesnt match
-
 /abc/i      |        Abc            |                         Yes    |     Because now its matching case insensitive wise with the help of 'i'
 
 
@@ -173,9 +151,7 @@ CharacterSets
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
 /a[123]b/      |     a2b                       |          Yes     |    as 2 matches in the character set
-
 /a[123]b/      |     a4b                       |          No      |    as 4 does not matches in the character set
-
 /a[123]+b/     |     a122233311b               |          Yes     |    as 123 is there in characterset and + denotes it can have one or more character set of 123
 
 
@@ -189,9 +165,7 @@ Character Ranges
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
 /a[1-5]b/        |   a2b                     |                Yes      |   As 2 is there in the range between 1-5
-
 /a[1-5]b/        |   a6b                    |                 No       |   As 6 is not there in the range between 1-5
-
 /[a-bA-Z0-9 ]+/  |   Hi there               |                 Yes       |  Any character between a-z A-Z 0-9 and Space any number of times repetatively
 
 
@@ -203,9 +177,6 @@ Negated CharacterSets
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
 /a[^1-5]b/     |      a6b                      |               Yes       |     As 6 is not there in the range between 1-5
-
 /a[^1-5]b/    |       a4b                      |               No        |     As 4 is there in the range between 1-5
-
 /[^a-z]/       |     hello                     |               No        |     As a-z is there in the range between a-z
-
 /[^a-z]/      |      HELLO                     |               Yes       |      As a-z is there not in the range between A-Z
