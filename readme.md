@@ -3,9 +3,19 @@ Regular Expresssion
 
 > NOTE : By default regular expression are case sensitive
 
+- [Simple String Matching](#simple-string-matching)
+- [Meta Characters](#meta-characters)
+- [Others](#others)
+- [Advanced Pattern Matching](#advanced-pattern-matching)
+- [Repetation](#repetation)
+- [Wildcard](#wildcard)
+- [Escaping](#escaping)
+- [Case Insensitive](#case-insensitive)
+- [CharacterSets](#character-sets)
+- [Character Ranges](#character-ranges)
+- [Negated CharacterSets](#negated-character-sets)
 
-Simple String Matching
-----------------------
+## Simple String Matching
 
 ###### Eg: in PHP
 ```
@@ -20,8 +30,8 @@ Regular Expresssion          |       String               |            	Match   
 /2:3/                       |        12:34:56             |               Yes       |     As 2:3 exists in string
 
 
-Meta Characters
----------------
+## Meta Characters
+
 ```
 \d - Digits from 0-9
 
@@ -38,8 +48,8 @@ Meta Characters
 \b - Any boundary word like spaces, dash (-), commas, semi-colons etc
 ```
 
-Others
-------
+## Others 
+
 ```
 () - Grouping characters the whole express will be acted like a single block 
     Eg: ([A-Z]\w+) - Will match any A to Z character and followed by any no of characters
@@ -59,8 +69,8 @@ Regular Expresssion          |       String               |            	Match   
 
 
 
-Advanced Pattern Matching
---------------------------
+## Advanced Pattern Matching
+
 ```
 ^ - Start of string
 
@@ -77,8 +87,8 @@ Regular Expresssion          |       String               |            	Match   
 /^abc$/           |          abcdef            |                      No       |       This will match the whole string
 
 
-Repetation
-----------
+## Repetation
+
 ```
 * 		- Zero or more
 
@@ -100,8 +110,8 @@ Regular Expresssion          |       String               |            	Match   
 /a+bc/      |            aabc                |                        Yes      |       Because 'a' may repeat one or many times
 
 
-Wildcard
---------
+## Wildcard
+
 ```
 . - Match any single character : letter, number, whitespace etc
 ```
@@ -116,8 +126,8 @@ Regular Expresssion          |       String               |            	Match   
 /ab.*/       |       ab                  |                            Yes     |    Because '.' has '*' which matches  0 or more characters
 
 
-Escaping
---------
+## Escaping
+
 ```
 \ - Match meta characters by escaping them
 Eg: if you want to match '.' in the pattern then you must escape '.' else the pattern will think that you want to match one character
@@ -129,8 +139,7 @@ Regular Expresssion          |       String               |            	Match   
 
 
 
-Case Insensitive
---------------
+## Case Insensitive
 
 By default case sensitive
 ```
@@ -144,8 +153,8 @@ Regular Expresssion          |       String               |            	Match   
 /abc/i      |        Abc            |                         Yes    |     Because now its matching case insensitive wise with the help of 'i'
 
 
-CharacterSets
--------------
+## CharacterSets
+
 ```
 [] - Match one of any characters in the bracket 
 
@@ -160,8 +169,8 @@ Regular Expresssion          |       String               |            	Match   
 
 
 
-Character Ranges
-----------------
+## Character Ranges
+
 ```
 [ - ] - Specifies the range of the characters inside the characterset
 	Eg: [0-9] will match any number between 0 to 9  and nothing else
@@ -174,8 +183,8 @@ Regular Expresssion          |       String               |            	Match   
 /[a-bA-Z0-9 ]+/  |   Hi there               |                 Yes       |  Any character between a-z A-Z 0-9 and Space any number of times repetatively
 
 
-Negated CharacterSets
----------------------
+## Negated CharacterSets
+
 ```
 [^ ] - This will negate the character set ie it will match any other characrters expect the ones in characterset
 ```
