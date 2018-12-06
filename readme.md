@@ -1,13 +1,13 @@
 Regular Expresssion
 -------------------
 
-NOTE : By default regular expression are case sensitive
+> NOTE : By default regular expression are case sensitive
 
 
 Simple String Matching
 ----------------------
 
-######Eg: in PHP
+###### Eg: in PHP
 ```
 preg_match($pattern, $stringToMatch, $matches);
 ```
