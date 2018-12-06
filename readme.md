@@ -79,12 +79,12 @@ $ - End of string
 
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
-/^abc/            |          abc               |                      Yes      |       As the string must start with
-/^abc/            |          abcdef            |                      Yes      |       As the string must start with
-/^abc/            |          123abcdef         |                      No       |       As the string dont  start with
+/^abc/            |          abc               |                      Yes      |       As the string must start with abc
+/^abc/            |          abcdef            |                      Yes      |       As the string must start with abc
+/^abc/            |          123abcdef         |                      No       |       As the string dont  start with abc but starting with 123
 /abc$/            |          123abc            |                      Yes      |       As the string ends with abc
-/^abc$/           |          abc               |                      Yes      |       This will match the whole string
-/^abc$/           |          abcdef            |                      No       |       This will match the whole string
+/^abc$/           |          abc               |                      Yes      |       This will match the whole string ie abc
+/^abc$/           |          abcdef            |                      No       |       This will match the whole string ie abc but the string has abcdef which wont match
 
 
 ## Repetation
