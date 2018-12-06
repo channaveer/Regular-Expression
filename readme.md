@@ -7,11 +7,10 @@ NOTE : By default regular expression are case sensitive
 Simple String Matching
 ----------------------
 
-Eg: in PHP
-----------
-
+######Eg: in PHP
+```
 preg_match($pattern, $stringToMatch, $matches);
-
+```
 
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
@@ -23,7 +22,7 @@ Regular Expresssion          |       String               |            	Match   
 
 Meta Characters
 ---------------
-
+```
 \d - Digits from 0-9
 
 \w - Alphabets from a-z, A-Z and Digits from 0-9
@@ -37,11 +36,11 @@ Meta Characters
 \W - Matches any non word character
 
 \b - Any boundary word like spaces, dash (-), commas, semi-colons etc
-
+```
 
 Others
 ------
-
+```
 () - Grouping characters the whole express will be acted like a single block 
     Eg: ([A-Z]\w+) - Will match any A to Z character and followed by any no of characters
 
@@ -49,6 +48,7 @@ Others
     Eg: th(at|is|en) - Will match any of that, this or then
 
 \number - Eg: \1 \2
+```
 
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
@@ -61,11 +61,11 @@ Regular Expresssion          |       String               |            	Match   
 
 Advanced Pattern Matching
 --------------------------
-
+```
 ^ - Start of string
 
 $ - End of string
-
+```
 
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
@@ -79,7 +79,7 @@ Regular Expresssion          |       String               |            	Match   
 
 Repetation
 ----------
-
+```
 * 		- Zero or more
 
 + 		- One or more
@@ -89,7 +89,7 @@ Repetation
 ? 		- Optional character, tells that the preceding charcter may or may not be present 
 
 			Eg: docx? may read to doc or docx
-
+```
 
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
@@ -102,8 +102,9 @@ Regular Expresssion          |       String               |            	Match   
 
 Wildcard
 --------
-
+```
 . - Match any single character : letter, number, whitespace etc
+```
 
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
@@ -117,9 +118,10 @@ Regular Expresssion          |       String               |            	Match   
 
 Escaping
 --------
-
+```
 \ - Match meta characters by escaping them
 Eg: if you want to match '.' in the pattern then you must escape '.' else the pattern will think that you want to match one character
+```
 
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
@@ -131,8 +133,9 @@ Case Insensitive
 --------------
 
 By default case sensitive
-
+```
 i - to make case insensitive
+```
 
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
@@ -143,10 +146,11 @@ Regular Expresssion          |       String               |            	Match   
 
 CharacterSets
 -------------
-
+```
 [] - Match one of any characters in the bracket 
 
 	Eg: [abc] will match either a, b or c and nothing else
+```
 
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
@@ -158,9 +162,10 @@ Regular Expresssion          |       String               |            	Match   
 
 Character Ranges
 ----------------
-
+```
 [ - ] - Specifies the range of the characters inside the characterset
 	Eg: [0-9] will match any number between 0 to 9  and nothing else
+```
 
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
@@ -171,8 +176,9 @@ Regular Expresssion          |       String               |            	Match   
 
 Negated CharacterSets
 ---------------------
-
+```
 [^ ] - This will negate the character set ie it will match any other characrters expect the ones in characterset
+```
 
 Regular Expresssion          |       String               |            	Match      |     Notes 
 ---------------------------- | -------------------------  |  --------------------- | -------------
